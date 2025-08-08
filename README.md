@@ -28,8 +28,8 @@ This project is a **local** Applicant Tracking System that:
 
 1. **Clone the repository**
 ```bash
-git clone https://github.com/YOUR_USERNAME/YOUR_REPO.git
-cd YOUR_REPO
+git clone https://github.com/Pepperjack-svg/ATS.git
+cd ATS
 ````
 
 2. **Create a virtual environment**
@@ -59,7 +59,7 @@ pip install pdfplumber sentence-transformers faiss-cpu
 3. Run:
 
 ```bash
-python ats.py
+python app.py
 ```
 
 4. Paste your job description when prompted (press **Enter twice** to finish).
@@ -79,9 +79,7 @@ Looking for a Python developer with experience in Django and REST APIs.
 [INFO] Scoring resumes...
 
 === ATS Match Results ===
-1. alice.pdf — Match Score: 89.42%
-2. bob.pdf — Match Score: 77.10%
-3. charlie.pdf — Match Score: 65.33%
+1. resume.pdf — Match Score: 89.42%
 ```
 
 ---
