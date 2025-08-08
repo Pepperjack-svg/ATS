@@ -91,15 +91,3 @@ Looking for a Python developer with experience in Django and REST APIs.
 
 ---
 
-## License
-
-MIT License
-
-```
-
----
-
-If you want, I can also **add badges** (Python version, License, Offline AI) and a small **diagram** showing the ATS flow so your GitHub page looks more professional.  
-
-Do you want me to make that upgrade?
-```
