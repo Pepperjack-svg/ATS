@@ -1,0 +1,107 @@
+
+# Local ATS (Applicant Tracking System) with Python & FAISS
+
+This project is a **local** Applicant Tracking System that:
+- Parses multiple PDF resumes.
+- Lets you paste a job description.
+- Scores resumes against the job description using **semantic similarity**.
+- Runs **completely offline** with a local embedding model (`model.safetensors`).
+
+---
+
+## Features
+- **Offline**: No cloud AI calls — works fully on your machine.
+- **Fast**: Uses `all-MiniLM-L6-v2` or any local `sentence-transformers` model.
+- **Scalable**: Can search thousands of resumes using FAISS.
+- **Easy to Use**: Just drop your resumes in a folder and run.
+
+---
+
+## Requirements
+- Python 3.8 or higher
+- A local embedding model in `model/` (must include:
+  `model.safetensors`, `config.json`, `tokenizer.json`, `tokenizer_config.json`)
+
+---
+
+## Installation
+
+1. **Clone the repository**
+```bash
+git clone https://github.com/YOUR_USERNAME/YOUR_REPO.git
+cd YOUR_REPO
+````
+
+2. **Create a virtual environment**
+
+```bash
+python -m venv venv
+# Activate:
+# Windows:
+venv\Scripts\activate
+# macOS/Linux:
+source venv/bin/activate
+```
+
+3. **Install dependencies**
+
+```bash
+pip install --upgrade pip
+pip install pdfplumber sentence-transformers faiss-cpu
+```
+
+---
+
+## Usage
+
+1. Place resumes in the `resumes/` folder.
+2. Make sure your local embedding model is in the `model/` folder.
+3. Run:
+
+```bash
+python ats.py
+```
+
+4. Paste your job description when prompted (press **Enter twice** to finish).
+5. Get a ranked list of matching resumes.
+
+---
+
+## Example Output
+
+```
+[INFO] Loading embedding model from model ...
+Paste your job description below (press Enter twice to finish):
+Looking for a Python developer with experience in Django and REST APIs.
+
+[INFO] Reading resumes...
+[INFO] Encoding resumes...
+[INFO] Scoring resumes...
+
+=== ATS Match Results ===
+1. alice.pdf — Match Score: 89.42%
+2. bob.pdf — Match Score: 77.10%
+3. charlie.pdf — Match Score: 65.33%
+```
+
+---
+
+## Notes
+
+* If you only have `model.safetensors`, download the rest of the model files from Hugging Face.
+* To keep your repo small, add `venv/` and `model/` to `.gitignore`.
+
+---
+
+## License
+
+MIT License
+
+```
+
+---
+
+If you want, I can also **add badges** (Python version, License, Offline AI) and a small **diagram** showing the ATS flow so your GitHub page looks more professional.  
+
+Do you want me to make that upgrade?
+```
