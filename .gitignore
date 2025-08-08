@@ -1,0 +1,16 @@
+# Ignore Python virtual environment
+venv/
+
+# Ignore Python cache files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore model files if you don't want to push them
+model/
+*.safetensors
+
+# Ignore OS-specific junk
+.DS_Store
+Thumbs.db
